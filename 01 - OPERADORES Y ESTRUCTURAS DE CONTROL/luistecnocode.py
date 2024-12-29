@@ -19,7 +19,6 @@
 '''
 
 # Operadores aritméticos
-# Utilizando fprints
 print(f"Suma: 10 + 5 = {10 + 5}")
 sum = 15 + 5
 print(f"Suma con variable: 15 + 5 = {sum}")
@@ -82,3 +81,25 @@ print(f"XOR: 10 ^ 3 = {10 ^ 3}") # 1001 ¿Son diferentes?
 print(f"NOT: ~10 = {~10}") # -11 ?? Ni idea
 print(f"Desplazamiento a la derecha: 10 >> 2 {10 >> 2}") # 0010 Se desplazan los bits 2 posiciones
 print(f"Desplazamiento a la izquierda: 10 << 2 {10 << 2}") # 101000 Se desplazan los bits 2 posiciones
+
+# ESTRUCTURAS DE CONTROL
+
+# Condicionales
+my_string = "Jiji"
+if my_string == "Luis":
+    print("my_string es 'Luis'")
+elif my_string == "MdF":
+    print("my_string es 'MdF'")
+else:
+    print("my_string no es ni 'Luis' ni 'MdF")
+
+# Iterativas
+print("Bucle for")
+for i in range(11):
+    print(i)
+
+print("Bucle while")
+i=0
+while i <= 5:
+    print(i)
+    i += 1 
