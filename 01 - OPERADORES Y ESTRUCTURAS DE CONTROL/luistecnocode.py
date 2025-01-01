@@ -13,7 +13,6 @@
  * DIFICULTAD EXTRA (opcional):
  * Crea un programa que imprima por consola todos los números comprendidos
  * entre 10 y 55 (incluidos), pares, y que no son ni el 16 ni múltiplos de 3.
- *
  * Seguro que al revisar detenidamente las posibilidades has descubierto algo nuevo.
  */
 '''
@@ -95,11 +94,26 @@ else:
 
 # Iterativas
 print("Bucle for")
-for i in range(11):
+for i in range(10): # De 0 a 9
     print(i)
 
-print("Bucle while")
+print("Bucle while") 
 i=0
-while i <= 5:
+while i <= 5: # De 0 a 5
     print(i)
     i += 1 
+
+# Manejo de excepciones
+try:
+    print(10 / 0)
+except:
+    print("Se ha producido un error")
+finally:
+    print("Ha finalizado las excepciones")
+
+#########
+# EXTRA #
+#########
+for i in range(10, 56):
+    if (i % 2 == 0) and (i != 16) and  (i % 3 != 0):
+        print(i)
