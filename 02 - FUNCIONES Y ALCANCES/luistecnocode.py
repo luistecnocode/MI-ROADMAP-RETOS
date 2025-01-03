@@ -23,6 +23,10 @@
  */
  '''
 
+#############################
+####       FUNCIONES     ####
+#############################
+
 # Funciones simples
 def greet():
     print("Funciones simples: ")
@@ -54,3 +58,53 @@ def default_arg_greet(name="Brais default"):
     print(f"Hola, {name}!")
 default_arg_greet()
 default_arg_greet("Luis")
+
+# Funciones con argumento y retorno
+def return_args_greet(greet, name):
+    print("Funciones con argumentos y retorno: ")
+    return(f"{greet}, {name}!")
+print(return_args_greet("Hi", "Luis!"))
+
+# Funciones con retorno de varios valores
+def multiple_return_greet():
+    print("Funciones con retorno de varios valores: ")
+    return "Hola", "Python"
+greet, name = multiple_return_greet()
+print(greet)
+print(name)
+
+# Funciones con un número variable de argumentos
+def variable_arg_greet(*names):
+    print("Funciones con un número variable de argumentos: ")
+    for name in names:
+        print(f"Hola, {name}!")
+variable_arg_greet("Python", "Luis", "comunidad" )
+
+# Funciones con un número variable de argumentos con palabra clave
+def variable_key_arg_greet(**names): # En realidad crea un DICCIONARIO
+    print("Funciones con un número variable de argumentos con palabra clave: ")
+    for key, value in names.items():
+        print(f"Hola, {value} ({key})!")
+variable_key_arg_greet(
+    language="Python", 
+    name="Luis", 
+    age=53 
+)
+
+
+
+
+#################################################
+####       FUNCIONES DENTRO DE FUNCIONES     ####
+#################################################
+
+def outer_function():
+    def inner_function():
+        print("Funcion interna: Hola, Python!")
+    inner_function() # Hay que llamarla desde dentro
+outer_function()
+
+
+#################################################
+####    FUNCIONES DEL LENGUAJE (BUILT-IN)    ####
+#################################################
