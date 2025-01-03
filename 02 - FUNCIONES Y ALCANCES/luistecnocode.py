@@ -108,3 +108,43 @@ outer_function()
 #################################################
 ####    FUNCIONES DEL LENGUAJE (BUILT-IN)    ####
 #################################################
+print("Funciones del lenguaje o built-in")
+print(len("mi nombre es Luis"))
+print(type(26))
+print("mi nombre es Luis".upper())
+
+
+#################################################
+####       VARIABLES LOCALES Y GLOBALES      ####
+#################################################
+
+global_variable = "Variable global"
+print(global_variable)
+def local_variable():
+    print(f"Hello, {global_variable}")
+    mi_local_variable = "variable local de la funcion"
+    print(f"Imprimo desde dentro, {mi_local_variable}")
+local_variable()
+# print(mi_local_variable)  No se puede acceder desde fuera
+print("No me deja imprimir mi_local_variable porque no la encuentra desde fuera")
+
+
+#################################################
+####       EJERCICIO DE DIFICULTAD EXTRA     ####
+#################################################
+
+def print_numbers(text1, text2)-> int:
+    count= 0
+    for number in range(1, 101):
+        if number % 3 == 0 and number % 5 == 0:
+            print(text1, text2)
+        elif number % 3 == 0:
+            print(text1)
+        elif number % 5 == 0:
+            print(text2)
+        else:
+            print(number)
+            count += 1 # Incrementa cuando imprimos número
+    return count
+        
+print(print_numbers("Fizz", "Buzz")) # Imprime el return
